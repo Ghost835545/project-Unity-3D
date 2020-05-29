@@ -8,6 +8,7 @@ public class Moving : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+
     void Start()
     {
         
@@ -20,8 +21,7 @@ public class Moving : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move*Time.deltaTime);
-
+        controller.Move(move * Time.deltaTime);
+      
     }
 }
